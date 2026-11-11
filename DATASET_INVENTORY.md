@@ -1,0 +1,95 @@
+# Fingerprint Dataset Inventory & Licensing Assessment
+
+**Location on disk:** `D:\Career\KIPSMA\FingerprintMatcher-Data`  
+**Date of Audit:** October 11, 2026  
+**Auditor:** KIPSMA Engineering Team  
+
+---
+
+## 1. Dataset Overview & Directory Layout
+
+The evaluation and benchmark datasets are organized into three primary collections:
+
+```
+D:\Career\KIPSMA\FingerprintMatcher-Data\
+├── FVC2002/
+│   ├── DB1_B/   (80 TIFF images: 10 subjects x 8 impressions)
+│   ├── DB2_B/   (80 TIFF images: 10 subjects x 8 impressions)
+│   ├── DB3_B/   (80 TIFF images: 10 subjects x 8 impressions)
+│   └── DB4_B/   (80 TIFF images: 10 subjects x 8 impressions [Synthetic])
+├── FVC2004/
+│   ├── DB1_B/   (80 TIFF images: 10 subjects x 8 impressions)
+│   ├── DB2_B/   (80 TIFF images: 10 subjects x 8 impressions)
+│   ├── DB3_B/   (80 TIFF images: 10 subjects x 8 impressions)
+│   └── DB4_B/   (80 TIFF images: 10 subjects x 8 impressions [Synthetic])
+└── SOCOFing/
+    └── archive/SOCOFing/
+        ├── Real/              (6,000 BMP images: 600 subjects x 10 fingers x 1 impression)
+        └── Altered/
+            ├── Altered-Easy/   (17,931 synthetically corrupted BMP images)
+            ├── Altered-Medium/ (17,067 synthetically corrupted BMP images)
+            └── Altered-Hard/   (14,272 synthetically corrupted BMP images)
+```
+
+---
+
+## 2. Detailed Dataset Specifications
+
+| Dataset | Subset | Image Format | Resolution / Size | Sensor / Source | Fingers × Impressions | Total Images |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **FVC2002** | `DB1_B` | 8-bit Gray TIFF | 500 dpi, $388 \times 374$ px | Optical (Identix TouchView II) | 10 × 8 | 80 |
+| **FVC2002** | `DB2_B` | 8-bit Gray TIFF | 569 dpi, $296 \times 560$ px | Optical (Biometrika FX2000) | 10 × 8 | 80 |
+| **FVC2002** | `DB3_B` | 8-bit Gray TIFF | 500 dpi, $300 \times 300$ px | Capacitive (Precise 100 SC) | 10 × 8 | 80 |
+| **FVC2002** | `DB4_B` | 8-bit Gray TIFF | 500 dpi, $288 \times 384$ px | Synthetic (SFinGe v2.51) | 10 × 8 | 80 |
+| **FVC2004** | `DB1_B` | 8-bit Gray TIFF | 500 dpi, $640 \times 480$ px | Optical (CrossMatch V300) | 10 × 8 | 80 |
+| **FVC2004** | `DB2_B` | 8-bit Gray TIFF | 512 dpi, $328 \times 364$ px | Optical (DigitalPersona U.are.U 4000) | 10 × 8 | 80 |
+| **FVC2004** | `DB3_B` | 8-bit Gray TIFF | 512 dpi, $300 \times 480$ px | Thermal Sweep (Atmel FingerChip) | 10 × 8 | 80 |
+| **FVC2004** | `DB4_B` | 8-bit Gray TIFF | 500 dpi, $288 \times 384$ px | Synthetic (SFinGe v3.0) | 10 × 8 | 80 |
+| **SOCOFing** | `Real` | 32-bit BGRA BMP | ~200 dpi, $96 \times 103$ px | Optical (SecuGen Hamster Plus) | 600 subjects × 10 fingers × 1 | 6,000 |
+| **SOCOFing** | `Altered` | 32-bit BGRA BMP | ~200 dpi, $96 \times 103$ px | Synthetic Alterations (Obl, CR, Zcut) | 600 subjects × 10 fingers × ~8 | 49,270 |
+
+---
+
+## 3. Identifiers & Metadata Conventions
+
+### 3.1 FVC2002 and FVC2004
+* **Naming Scheme:** `<finger_id>_<impression_id>.tif` (e.g. `101_1.tif` to `110_8.tif`).
+* **Finger ID:** Integer from 101 to 110 (10 distinct fingers per database).
+* **Impression ID:** Integer from 1 to 8 (8 independent captures per finger taken under varied skin conditions, rotations, and pressures).
+* **Evaluation Pair Matrix:**
+  * **Genuine pairs per DB:** $\binom{8}{2} \times 10 = 28 \times 10 = 280$ matching pairs.
+  * **Impostor pairs per DB (first impression vs first impression):** $\binom{10}{2} = 45$ non-matching pairs (or all pairs cross-matched: $80 \times 72 / 2 = 2,880$ cross-finger pairs).
+
+### 3.2 SOCOFing (Sokoto Coventry Fingerprint Dataset)
+* **Naming Scheme (Real):** `<SubjectID>__<Gender>_<Hand>_<Finger>_finger.BMP`
+  * Example: `100__M_Left_index_finger.BMP`
+* **Naming Scheme (Altered):** `<SubjectID>__<Gender>_<Hand>_<Finger>_finger_<CorruptionType>.BMP`
+  * Example: `100__M_Left_index_finger_CR.BMP` (Central Rotation)
+  * Example: `100__M_Left_index_finger_Obl.BMP` (Obliteration)
+  * Example: `100__M_Left_index_finger_Zcut.BMP` (Z-cut deformation)
+* **Attributes Available in Filename:**
+  * Subject ID: 1 to 600
+  * Gender: `M` or `F`
+  * Hand: `Left` or `Right`
+  * Finger: `thumb`, `index`, `middle`, `ring`, `little`
+  * Corruption Type: `Obl` (Obliteration), `CR` (Central Rotation), `Zcut` (Z-cut)
+
+---
+
+## 4. Legal & Licensing Terms Assessment for Employer Work
+
+| Dataset | Declared License / Source | Permitted Uses | Commercial Deliverable Eligibility | Compliance Recommendation |
+| :--- | :--- | :--- | :--- | :--- |
+| **FVC2002 / FVC2004 (B-subsets)** | Public competition benchmark samples from University of Bologna BioLab. | Academic benchmarking and algorithm performance evaluation. | **Internal R&D Evaluation Only.** Cannot be bundled or redistributed in commercial deliverables. | Use strictly as an internal automated validation benchmark to measure EER/ROC. Do not check into public or proprietary client codebases. |
+| **FVC DB4_B (Synthetic)** | Synthetic fingerprints generated by SFinGe (Biometric System Laboratory). | Algorithm validation. No human biometric data involved. | **Internal Evaluation.** Free of GDPR/BIPA biometric privacy constraints. | Preferred for initial automated CI testing since no human privacy risks exist. |
+| **SOCOFing** | Non-Commercial Research License (Shehu et al., 2018; arXiv:1807.10609). | Strictly non-commercial research. | **PROHIBITED from Commercial Use.** | **Do NOT use for commercial products, client deliverables, or proprietary training.** Retain in isolated test directory solely for stress-testing minutiae pruning on corrupted ridges. |
+| **NIST NBIS / SD Datasets** | US Federal Government (Title 17 Section 105 USC). Public Domain. | Unrestricted worldwide use, modification, and commercialization. | **Fully Eligible.** | Safest baseline for commercial algorithms requiring public reference baselines. |
+
+---
+
+## 5. Storage & Safety Rules
+
+1. **Read-Only Preservation:** The original dataset folders in `D:\Career\KIPSMA\FingerprintMatcher-Data` must remain strictly unmodified.
+2. **Git Exclusion:** Datasets must never be committed to `kipsma_fingerprint_matcher` repository. Keep `.gitignore` updated with data paths.
+3. **Artifact Segregation:** All evaluation logs, extracted templates, and ROC CSV outputs must be written to dedicated build/scratch directories (`build/test_results/`).
+

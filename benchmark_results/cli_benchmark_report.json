@@ -1,0 +1,14 @@
+{
+  "dataset": "D:\Career\KIPSMA\FingerprintMatcher-Data\FVC2002\DB1_B",
+  "impressionsCount": 80,
+  "genuinePairsCount": 280,
+  "impostorPairsCount": 45,
+  "genuineScore": {"min": 0, "max": 11.3613, "mean": 0.332551, "std": 0.960961},
+  "impostorScore": {"min": 0.0236261, "max": 1.29463, "mean": 0.243521, "std": 0.284723},
+  "eer": 100,
+  "eerThreshold": 0,
+  "zeroFmrFnmar": 96.4286,
+  "fmr100Fnmr": 96.4286,
+  "avgExtractMs": 51.5804,
+  "avgMatchUs": 2104.8
+}

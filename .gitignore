@@ -1,0 +1,44 @@
+# Build outputs
+build/
+bin/
+lib/
+Debug/
+Release/
+x64/
+x86/
+.vs/
+*.VC.db
+*.opendb
+*.ipch
+*.tlog
+*.idb
+*.pdb
+*.obj
+*.ilk
+*.exp
+*.exe
+*.dll
+*.lib
+
+# CMake outputs
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+
+# Datasets (refer to DATASET_INVENTORY.md for external sources)
+*.tif
+*.tiff
+*.raw
+FVC2002/
+FVC2004/
+SOCOFing/
+
+# Python & editors
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

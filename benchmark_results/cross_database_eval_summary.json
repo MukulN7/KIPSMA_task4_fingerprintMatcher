@@ -1,0 +1,268 @@
+{
+  "FVC2002_DB2_B": {
+    "baseline": {
+      "output_file": "benchmark_results\\fvc2002_db2_b_baseline.json",
+      "runtime_sec": 6.77,
+      "metrics": {
+        "num_gen": 280,
+        "num_imp": 45,
+        "gen_mean": 0.22744167607142857,
+        "gen_std": 0.40222082531252784,
+        "imp_mean": 0.18071123777777778,
+        "imp_std": 0.12722384429683034,
+        "auc": 0.4715079365079365,
+        "eer": 55.63492063492064,
+        "eer_thresh": 0.149872,
+        "eer_fmr": 55.55555555555556,
+        "eer_fnmr": 55.714285714285715
+      },
+      "status": "EXISTING_OK"
+    },
+    "local": {
+      "output_file": "benchmark_results\\fvc2002_db2_b_local.json",
+      "runtime_sec": 8.23,
+      "metrics": {
+        "num_gen": 280,
+        "num_imp": 45,
+        "gen_mean": 0.8115967214285714,
+        "gen_std": 0.7076580796433408,
+        "imp_mean": 0.5789187777777778,
+        "imp_std": 0.25773157534043384,
+        "auc": 0.6334920634920634,
+        "eer": 42.182539682539684,
+        "eer_thresh": 0.582335,
+        "eer_fmr": 42.22222222222222,
+        "eer_fnmr": 42.142857142857146
+      },
+      "status": "EXISTING_OK"
+    }
+  },
+  "FVC2002_DB3_B": {
+    "baseline": {
+      "output_file": "benchmark_results\\fvc2002_db3_b_baseline.json",
+      "runtime_sec": 3.36,
+      "metrics": {
+        "num_gen": 280,
+        "num_imp": 45,
+        "gen_mean": 1.8691251639285713,
+        "gen_std": 8.575245527134312,
+        "imp_mean": 2.567010273333333,
+        "imp_std": 4.739395362026905,
+        "auc": 0.3304761904761905,
+        "eer": 62.00396825396825,
+        "eer_thresh": 0.234073,
+        "eer_fmr": 62.22222222222222,
+        "eer_fnmr": 61.78571428571429
+      },
+      "status": "OK"
+    },
+    "local": {
+      "output_file": "benchmark_results\\fvc2002_db3_b_local.json",
+      "runtime_sec": 2.99,
+      "metrics": {
+        "num_gen": 280,
+        "num_imp": 45,
+        "gen_mean": 5.5159844,
+        "gen_std": 8.791458246406188,
+        "imp_mean": 4.628816222222222,
+        "imp_std": 4.2682364192148965,
+        "auc": 0.5406349206349207,
+        "eer": 42.182539682539684,
+        "eer_thresh": 2.74621,
+        "eer_fmr": 42.22222222222222,
+        "eer_fnmr": 42.142857142857146
+      },
+      "status": "OK"
+    }
+  },
+  "FVC2002_DB4_B": {
+    "baseline": {
+      "output_file": "benchmark_results\\fvc2002_db4_b_baseline.json",
+      "runtime_sec": 3.8,
+      "metrics": {
+        "num_gen": 280,
+        "num_imp": 45,
+        "gen_mean": 0.3953061310714286,
+        "gen_std": 0.7081405223649924,
+        "imp_mean": 0.2985969533333333,
+        "imp_std": 0.2796630107589955,
+        "auc": 0.4595238095238095,
+        "eer": 55.63492063492064,
+        "eer_thresh": 0.213037,
+        "eer_fmr": 55.55555555555556,
+        "eer_fnmr": 55.714285714285715
+      },
+      "status": "OK"
+    },
+    "local": {
+      "output_file": "benchmark_results\\fvc2002_db4_b_local.json",
+      "runtime_sec": 3.68,
+      "metrics": {
+        "num_gen": 280,
+        "num_imp": 45,
+        "gen_mean": 1.9273502821428572,
+        "gen_std": 1.116933279350902,
+        "imp_mean": 1.7086118666666668,
+        "imp_std": 0.8166748077255883,
+        "auc": 0.5421428571428571,
+        "eer": 48.90873015873016,
+        "eer_thresh": 1.62867,
+        "eer_fmr": 48.888888888888886,
+        "eer_fnmr": 48.92857142857142
+      },
+      "status": "OK"
+    }
+  },
+  "FVC2004_DB1_B": {
+    "baseline": {
+      "output_file": "benchmark_results\\fvc2004_db1_b_baseline.json",
+      "runtime_sec": 7.26,
+      "metrics": {
+        "num_gen": 280,
+        "num_imp": 45,
+        "gen_mean": 0.2275758,
+        "gen_std": 0.33502803070167736,
+        "imp_mean": 0.28741774666666664,
+        "imp_std": 0.4766501194983202,
+        "auc": 0.5376587301587301,
+        "eer": 46.726190476190474,
+        "eer_thresh": 0.109717,
+        "eer_fmr": 46.666666666666664,
+        "eer_fnmr": 46.785714285714285
+      },
+      "status": "OK"
+    },
+    "local": {
+      "output_file": "benchmark_results\\fvc2004_db1_b_local.json",
+      "runtime_sec": 6.98,
+      "metrics": {
+        "num_gen": 280,
+        "num_imp": 45,
+        "gen_mean": 0.8685599642857142,
+        "gen_std": 0.6400741160091642,
+        "imp_mean": 1.0744442222222221,
+        "imp_std": 0.8679288004977492,
+        "auc": 0.43662698412698414,
+        "eer": 58.17460317460317,
+        "eer_thresh": 0.807086,
+        "eer_fmr": 57.77777777777777,
+        "eer_fnmr": 58.57142857142858
+      },
+      "status": "OK"
+    }
+  },
+  "FVC2004_DB2_B": {
+    "baseline": {
+      "output_file": "benchmark_results\\fvc2004_db2_b_baseline.json",
+      "runtime_sec": 4.25,
+      "metrics": {
+        "num_gen": 280,
+        "num_imp": 45,
+        "gen_mean": 0.4284876403571429,
+        "gen_std": 1.2551299378078795,
+        "imp_mean": 0.27713575333333335,
+        "imp_std": 0.425070680959955,
+        "auc": 0.3993253968253968,
+        "eer": 60.0,
+        "eer_thresh": 0.158061,
+        "eer_fmr": 60.0,
+        "eer_fnmr": 60.0
+      },
+      "status": "OK"
+    },
+    "local": {
+      "output_file": "benchmark_results\\fvc2004_db2_b_local.json",
+      "runtime_sec": 4.23,
+      "metrics": {
+        "num_gen": 280,
+        "num_imp": 45,
+        "gen_mean": 1.5392552692857144,
+        "gen_std": 1.3934279136266945,
+        "imp_mean": 1.9329180222222224,
+        "imp_std": 1.3105637473489455,
+        "auc": 0.39206349206349206,
+        "eer": 55.63492063492064,
+        "eer_thresh": 1.39863,
+        "eer_fmr": 55.55555555555556,
+        "eer_fnmr": 55.714285714285715
+      },
+      "status": "OK"
+    }
+  },
+  "FVC2004_DB3_B": {
+    "baseline": {
+      "output_file": "benchmark_results\\fvc2004_db3_b_baseline.json",
+      "runtime_sec": 4.95,
+      "metrics": {
+        "num_gen": 280,
+        "num_imp": 45,
+        "gen_mean": 0.25659236535714286,
+        "gen_std": 0.47417973190375456,
+        "imp_mean": 0.17749145555555554,
+        "imp_std": 0.17518340111849076,
+        "auc": 0.5140476190476191,
+        "eer": 49.08730158730159,
+        "eer_thresh": 0.122928,
+        "eer_fmr": 48.888888888888886,
+        "eer_fnmr": 49.28571428571429
+      },
+      "status": "OK"
+    },
+    "local": {
+      "output_file": "benchmark_results\\fvc2004_db3_b_local.json",
+      "runtime_sec": 5.91,
+      "metrics": {
+        "num_gen": 280,
+        "num_imp": 45,
+        "gen_mean": 0.9150236,
+        "gen_std": 0.641513075379548,
+        "imp_mean": 0.6649588444444444,
+        "imp_std": 0.2966880806821239,
+        "auc": 0.633015873015873,
+        "eer": 37.817460317460316,
+        "eer_thresh": 0.634719,
+        "eer_fmr": 37.77777777777778,
+        "eer_fnmr": 37.857142857142854
+      },
+      "status": "OK"
+    }
+  },
+  "FVC2004_DB4_B": {
+    "baseline": {
+      "output_file": "benchmark_results\\fvc2004_db4_b_baseline.json",
+      "runtime_sec": 4.25,
+      "metrics": {
+        "num_gen": 280,
+        "num_imp": 45,
+        "gen_mean": 0.33646986071428575,
+        "gen_std": 0.6114735032963222,
+        "imp_mean": 0.31619690666666667,
+        "imp_std": 0.3627107203577684,
+        "auc": 0.4743253968253968,
+        "eer": 51.091269841269835,
+        "eer_thresh": 0.152769,
+        "eer_fmr": 51.11111111111111,
+        "eer_fnmr": 51.07142857142857
+      },
+      "status": "OK"
+    },
+    "local": {
+      "output_file": "benchmark_results\\fvc2004_db4_b_local.json",
+      "runtime_sec": 4.28,
+      "metrics": {
+        "num_gen": 280,
+        "num_imp": 45,
+        "gen_mean": 1.5561207785714286,
+        "gen_std": 1.064452860188571,
+        "imp_mean": 1.9430281555555555,
+        "imp_std": 1.5141637293855048,
+        "auc": 0.42253968253968255,
+        "eer": 53.273809523809526,
+        "eer_thresh": 1.32547,
+        "eer_fmr": 53.333333333333336,
+        "eer_fnmr": 53.214285714285715
+      },
+      "status": "OK"
+    }
+  }
+}
